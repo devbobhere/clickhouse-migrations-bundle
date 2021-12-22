@@ -31,6 +31,7 @@ class MigrationsManager
     {
         $migrations = $this->getNonAppliedMigrations();
         foreach ($migrations as $version) {
+            sleep(1);
             $this->upMigration($version);
         }
 
